@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rosiecube.github.io/sitemap.xml
