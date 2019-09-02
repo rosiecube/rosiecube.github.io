@@ -9,9 +9,9 @@
 
 
 
-<title>Unmanaged Language 배워야 하는 이유 | rosiecube</title>
+<title>c++ 프로젝트 만들기 | rosiecube</title>
 
-<link rel="canonical" href="https://rosiecube.github.io/2019/08/18/programming/why-learn-unmanaged-language/">
+<link rel="canonical" href="https://rosiecube.github.io/2019/09/02/programming/c++/make-c++-project/">
 
 
 
@@ -119,73 +119,11 @@ ga('send', 'pageview');
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Unmanaged Language 배워야 하는 이유</h1>
+            <h1 class="post-title">c++ 프로젝트 만들기</h1>
             
                 <div class="post-meta">
                     
@@ -194,14 +132,14 @@ ga('send', 'pageview');
 
                     
                         <span class="post-time">
-                        Date: <a href="#">2019-08-18<!--&nbsp;&nbsp;17:15:23--></a>
+                        Date: <a href="#">2019-09-02<!--&nbsp;&nbsp;12:00:00--></a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                            <a href="/categories/programming/">programming</a>
+                            <a href="/categories/programming/">programming</a> / <a href="/categories/programming/c/">c++</a>
                         </span>
                     
                 </div>
@@ -209,37 +147,15 @@ ga('send', 'pageview');
         </header>
 
         <div class="post-content">
-            <p>Managed Language 프로그래머라도 Unmanaged Language로 컴퓨터를 이해할 수 있도록 시간을 들여야 한다.<br>빨리 직장에 들어가는 것만 생각하지 말고 꾸준히 만족할 수 있게 준비하자.</p>
-<h2 id="Unmanaged-Language-에서만-배울-수-있는-것"><a href="#Unmanaged-Language-에서만-배울-수-있는-것" class="headerlink" title="Unmanaged Language 에서만 배울 수 있는 것"></a>Unmanaged Language 에서만 배울 수 있는 것</h2><ul>
-<li>메모리 동작 원리</li>
-<li>CPU 동작 원리</li>
-<li>컴퓨터처럼 생각하는 방법</li>
-<li>Managed Language에서 지원하는 모든 기능들의 동작원리</li>
-</ul>
-<h2 id="이른-시기에-컴퓨터를-이해하면-빠르게-성장-2-3-배"><a href="#이른-시기에-컴퓨터를-이해하면-빠르게-성장-2-3-배" class="headerlink" title="이른 시기에 컴퓨터를 이해하면 빠르게 성장 (2~3 배)"></a>이른 시기에 컴퓨터를 이해하면 빠르게 성장 (2~3 배)</h2><p>하드웨어를 이해하면 같은 로직이어도 버그가 적고 효율적인 코드를 짤 수 있다.</p>
-<h2 id="Unmanaged-Launguage-공부기간"><a href="#Unmanaged-Launguage-공부기간" class="headerlink" title="Unmanaged Launguage 공부기간"></a>Unmanaged Launguage 공부기간</h2><p>최소한 1년 이상 생각하면서 써야 한다.</p>
-<h2 id="향후-10년-커리어에-대한-고민"><a href="#향후-10년-커리어에-대한-고민" class="headerlink" title="향후 10년 커리어에 대한 고민"></a>향후 10년 커리어에 대한 고민</h2><ul>
-<li>여전히 프로그래머로서 일하고 싶은가?<ul>
-<li>단기 직장 X</li>
-<li>10년 후 직업만족도</li>
-<li>돈을 얼마나 버는지</li>
-</ul>
-</li>
-<li>더 높은 연봉을 받고 싶은가?</li>
-</ul>
-<h2 id="장기적인-커리어-보장-과목에-초점"><a href="#장기적인-커리어-보장-과목에-초점" class="headerlink" title="장기적인 커리어 보장 과목에 초점"></a>장기적인 커리어 보장 과목에 초점</h2><ul>
-<li>C/C++ (Unmanaged Language)<ul>
-<li>기본기와 하드웨어 공부에 집중</li>
-</ul>
-</li>
-<li>컴퓨터 아키텍처</li>
-<li>기타 등등</li>
-</ul>
-<hr>
-<p><strong>References</strong></p>
-<ul>
-<li><a href="https://www.udemy.com/cpp-unmanaged-programming-by-pocu/" rel="external nofollow noopener noreferrer" target="_blank">https://www.udemy.com/cpp-unmanaged-programming-by-pocu/</a></li>
-</ul>
+            <ol>
+<li>Window 데스크톱 마법사</li>
+<li>프로젝트 이름 정하기</li>
+<li>위치 설정</li>
+<li>만들기</li>
+<li>콘솔 애플리케이션(.exe)</li>
+<li>빈 프로젝트</li>
+<li>확인</li>
+</ol>
 
         </div>
 
@@ -254,7 +170,7 @@ ga('send', 'pageview');
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://rosiecube.github.io/2019/08/18/programming/why-learn-unmanaged-language/">https://rosiecube.github.io/2019/08/18/programming/why-learn-unmanaged-language/</a></span>
+                        <span><a href="https://rosiecube.github.io/2019/09/02/programming/c++/make-c++-project/">https://rosiecube.github.io/2019/09/02/programming/c++/make-c++-project/</a></span>
                     </p>
                 
                 
@@ -287,8 +203,10 @@ ga('send', 'pageview');
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2019/08/30/programming/c++/install-visual-studio-2019-community/">Visual Studio 2019 Community 설치</a>
+                <a class="prev" rel="prev" href="/2019/09/02/programming/c++/add-cpp-file-in-project/">프로젝트에 cpp 파일 추가</a>
             
+            
+            <a class="next" rel="next" href="/2019/08/30/programming/c++/install-visual-studio-2019-community/">Visual Studio 2019 Community 설치</a>
             
         </section>
         <section class="post-comment">

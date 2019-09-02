@@ -8,8 +8,287 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>게임 만들기 블로그</description>
-    <pubDate>Mon, 26 Aug 2019 02:10:07 GMT</pubDate>
+    <pubDate>Mon, 02 Sep 2019 06:30:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>조건문 (Conditional Statement)</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/conditional-statement/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/conditional-statement/</guid>
+      <pubDate>Mon, 02 Sep 2019 04:30:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;if-문&quot;&gt;&lt;a href=&quot;#if-문&quot; class=&quot;headerlink&quot; title=&quot;if 문&quot;&gt;&lt;/a&gt;if 문&lt;/h2&gt;&lt;p&gt;복잡한 조건을 확인하기 위해서 사용&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="if-문"><a href="#if-문" class="headerlink" title="if 문"></a>if 문</h2><p>복잡한 조건을 확인하기 위해서 사용</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (조건)</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (조건)</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="switch-문"><a href="#switch-문" class="headerlink" title="switch 문"></a>switch 문</h2><p>if 문 보다 조금 더 빠라 가능하다면 switch 문을 사용</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (조건 확인용 변수)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> 값<span class="number">1</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 값<span class="number">2</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="case-안에서-변수를-선언-할때는-중괄호-를-꼭-해야한다"><a href="#case-안에서-변수를-선언-할때는-중괄호-를-꼭-해야한다" class="headerlink" title="case 안에서 변수를 선언 할때는 {}(중괄호)를 꼭 해야한다."></a>case 안에서 변수를 선언 할때는 {}(중괄호)를 꼭 해야한다.</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c = <span class="string">'a'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> (c)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">        <span class="comment">// 오류 C2361 'a' 초기화가 'default' 레이블에 의해 생략되었습니다.</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c = <span class="string">'a'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> (c)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="홀수-짝수-확인"><a href="#홀수-짝수-확인" class="headerlink" title="홀수 짝수 확인"></a>홀수 짝수 확인</h2><h3 id="소스"><a href="#소스" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    scanf_s(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"n : %d\n"</span>, n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n % <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 나머지가 1인 경우 (홀수)</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"홀수 입니다.\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"짝수 입니다.\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면-1"><a href="#실행-화면-1" class="headerlink" title="실행 화면 1"></a>실행 화면 1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">n : 6</span><br><span class="line">짝수 입니다.</span><br></pre></td></tr></table></figure><h3 id="실행-화면-2"><a href="#실행-화면-2" class="headerlink" title="실행 화면 2"></a>실행 화면 2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">n : 5</span><br><span class="line">홀수 입니다.</span><br></pre></td></tr></table></figure><h2 id="문자-확인-switch-문"><a href="#문자-확인-switch-문" class="headerlink" title="문자 확인 (switch 문)"></a>문자 확인 (switch 문)</h2><h3 id="소스-1"><a href="#소스-1" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"문자를 입력하시오\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// scanf_s 는 문자를 입력할때 뒤에 꼭 문자 길이를 넣어줘야 한다.</span></span><br><span class="line">    scanf_s(<span class="string">"%c"</span>, &amp;c, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (c)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"a를 입력했습니다.\n"</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"b를 입력했습니다.\n"</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"조건에 없는 문자입니다.\n"</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면-1-1"><a href="#실행-화면-1-1" class="headerlink" title="실행 화면 1"></a>실행 화면 1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">문자를 입력하시오</span><br><span class="line">a</span><br><span class="line">a를 입력했습니다.</span><br></pre></td></tr></table></figure><h3 id="실행-화면-2-1"><a href="#실행-화면-2-1" class="headerlink" title="실행 화면 2"></a>실행 화면 2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">문자를 입력하시오</span><br><span class="line">b</span><br><span class="line">b를 입력했습니다.</span><br></pre></td></tr></table></figure><h3 id="실행-화면-3"><a href="#실행-화면-3" class="headerlink" title="실행 화면 3"></a>실행 화면 3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">문자를 입력하시오</span><br><span class="line">h</span><br><span class="line">조건에 없는 문자입니다.</span><br></pre></td></tr></table></figure><h2 id="문자-확인-if-문"><a href="#문자-확인-if-문" class="headerlink" title="문자 확인 (if 문)"></a>문자 확인 (if 문)</h2><h3 id="소스-2"><a href="#소스-2" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"문자를 입력하시오\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// scanf_s 는 문자를 입력할때 뒤에 꼭 문자 길이를 넣어줘야 한다.</span></span><br><span class="line">    scanf_s(<span class="string">"%c"</span>, &amp;c, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (c == <span class="string">'a'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"a를 입력했습니다.\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">'b'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"b를 입력했습니다.\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"조건에 없는 문자입니다.\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면-1-2"><a href="#실행-화면-1-2" class="headerlink" title="실행 화면 1"></a>실행 화면 1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">문자를 입력하시오</span><br><span class="line">a</span><br><span class="line">a를 입력했습니다.</span><br></pre></td></tr></table></figure><h3 id="실행-화면-2-2"><a href="#실행-화면-2-2" class="headerlink" title="실행 화면 2"></a>실행 화면 2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">문자를 입력하시오</span><br><span class="line">b</span><br><span class="line">b를 입력했습니다.</span><br></pre></td></tr></table></figure><h3 id="실행-화면-3-1"><a href="#실행-화면-3-1" class="headerlink" title="실행 화면 3"></a>실행 화면 3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">문자를 입력하시오</span><br><span class="line">h</span><br><span class="line">조건에 없는 문자입니다.</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/conditional-statement/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>표준 입출력 라이브러리</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/standard-input-output-library/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/standard-input-output-library/</guid>
+      <pubDate>Mon, 02 Sep 2019 04:30:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;Hello-World-출력&quot;&gt;&lt;a href=&quot;#Hello-World-출력&quot; class=&quot;headerlink&quot; title=&quot;Hello World 출력&quot;&gt;&lt;/a&gt;Hello World 출력&lt;/h2&gt;&lt;h3 id=&quot;소스&quot;&gt;&lt;a href=&quot;#소스&quot;
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="Hello-World-출력"><a href="#Hello-World-출력" class="headerlink" title="Hello World 출력"></a>Hello World 출력</h2><h3 id="소스"><a href="#소스" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면"><a href="#실행-화면" class="headerlink" title="실행 화면"></a>실행 화면</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World</span><br></pre></td></tr></table></figure><h2 id="변수-출력"><a href="#변수-출력" class="headerlink" title="변수 출력"></a>변수 출력</h2><h3 id="소스-1"><a href="#소스-1" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="keyword">int</span> age = <span class="number">29</span>;</span><br><span class="line">    <span class="keyword">float</span> tall = <span class="number">179.99f</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"내 혈액형은 %c 입니다. \n"</span>, blood);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"내 나이는 %d 입니다. \n"</span>, age); <span class="comment">// 10 진수</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"내 나이는 %x 입니다. \n"</span>, age); <span class="comment">// 16 진수</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"내 키는 %.2f 입니다. \n"</span>, tall); <span class="comment">// 2째 자리수 까지 출력</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면-1"><a href="#실행-화면-1" class="headerlink" title="실행 화면"></a>실행 화면</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">내 혈액형은 B 입니다. </span><br><span class="line">내 나이는 29 입니다. </span><br><span class="line">내 나이는 1d 입니다. </span><br><span class="line">내 키는 179.99 입니다.</span><br></pre></td></tr></table></figure><h2 id="변수-입력"><a href="#변수-입력" class="headerlink" title="변수 입력"></a>변수 입력</h2><h3 id="소스-2"><a href="#소스-2" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//scanf("%d", &amp;n);</span></span><br><span class="line">    <span class="comment">// 오류 C4996 'scanf':</span></span><br><span class="line">    <span class="comment">//  This function or variable may be unsafe.</span></span><br><span class="line">    <span class="comment">//  Consider using scanf_s instead.</span></span><br><span class="line">    <span class="comment">//  To disable deprecation, use _CRT_SECURE_NO_WARNINGS.</span></span><br><span class="line">    <span class="comment">//  See online help for details.</span></span><br><span class="line"></span><br><span class="line">    scanf_s(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"n : %d\n"</span>, n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면-2"><a href="#실행-화면-2" class="headerlink" title="실행 화면"></a>실행 화면</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">n : 10</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/standard-input-output-library/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>연산자 (Operator)</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/operator/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/operator/</guid>
+      <pubDate>Mon, 02 Sep 2019 04:20:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;기본 연산자&lt;/th&gt;
+&lt;th&gt;대입 연산자&lt;/th&gt;
+&lt;th&gt;조건 연산자&lt;/th&gt;
+&lt;th&gt;논리 연산자&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;=&lt;/td&gt;
+&lt;td&gt;&amp;g
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<table><thead><tr><th>기본 연산자</th><th>대입 연산자</th><th>조건 연산자</th><th>논리 연산자</th></tr></thead><tbody><tr><td>+</td><td>=</td><td>&gt;</td><td>&amp;&amp; (그리고)</td></tr><tr><td>-</td><td>+=</td><td>&lt;</td><td>|| (또는)</td></tr><tr><td>*</td><td>-=</td><td>&gt;=</td><td></td></tr><tr><td>/</td><td>*=</td><td>&lt;=</td><td></td></tr><tr><td>%</td><td>/=</td><td>==</td><td></td></tr><tr><td></td><td>%=</td><td></td><td></td></tr></tbody></table><h2 id="기본-연산자"><a href="#기본-연산자" class="headerlink" title="기본 연산자"></a>기본 연산자</h2><h3 id="소스"><a href="#소스" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">10</span>, y = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d + %d = %d\n"</span>, x, y, x + y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면"><a href="#실행-화면" class="headerlink" title="실행 화면"></a>실행 화면</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 + 20 = 30</span><br></pre></td></tr></table></figure><h2 id="대입-연산자"><a href="#대입-연산자" class="headerlink" title="대입 연산자"></a>대입 연산자</h2><h3 id="소스-1"><a href="#소스-1" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">10</span>, y = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    x += <span class="number">30</span>; <span class="comment">// x = x + 30;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d + %d = %d\n"</span>, x, y, x + y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면-1"><a href="#실행-화면-1" class="headerlink" title="실행 화면"></a>실행 화면</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">40 + 20 = 60</span><br></pre></td></tr></table></figure><h2 id="조건-연산자"><a href="#조건-연산자" class="headerlink" title="조건 연산자"></a>조건 연산자</h2><h3 id="소스-2"><a href="#소스-2" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">40</span>, y = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">" %d &lt; %d = %d\n"</span>, x, y, x &lt; y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">" %d &gt; %d = %d\n"</span>, x, y, x &gt; y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면-2"><a href="#실행-화면-2" class="headerlink" title="실행 화면"></a>실행 화면</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">40 &lt; 20 = 0</span><br><span class="line">40 &gt; 20 = 1</span><br></pre></td></tr></table></figure><h2 id="논리-연산자"><a href="#논리-연산자" class="headerlink" title="논리 연산자"></a>논리 연산자</h2><h3 id="소스-3"><a href="#소스-3" class="headerlink" title="소스"></a>소스</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">40</span>, y = <span class="number">20</span>, z = <span class="number">30</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(</span><br><span class="line">        <span class="string">"%d는 %d보다 크고 %d 보다 작다 = %d\n"</span>,</span><br><span class="line">        x, y, z, x &gt; y &amp;&amp; x &lt; z</span><br><span class="line">    );</span><br><span class="line">    <span class="built_in">printf</span>(</span><br><span class="line">        <span class="string">"%d는 %d보다 크거나 %d 보다 작다 = %d\n"</span>,</span><br><span class="line">        x, y, z, x &gt; y || x &lt; z</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="실행-화면-3"><a href="#실행-화면-3" class="headerlink" title="실행 화면"></a>실행 화면</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">40는 20보다 크고 30 보다 작다 = 0</span><br><span class="line">40는 20보다 크거나 30 보다 작다 = 1</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/operator/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>변수 (Variable)</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/variable/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/variable/</guid>
+      <pubDate>Mon, 02 Sep 2019 04:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;8 bit = 1 byte&lt;/li&gt;
+&lt;li&gt;첫번째 비트는 음수 양수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;정수&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;실수&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/t
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<ul><li>8 bit = 1 byte</li><li>첫번째 비트는 음수 양수</li></ul><table><thead><tr><th>정수</th><th></th><th></th><th>실수</th><th></th><th></th></tr></thead><tbody><tr><td>char</td><td>1 byte</td><td>-2^7 ~ 2^7 - 1</td><td>float</td><td>4 byte</td><td></td></tr><tr><td>short</td><td>2 byte</td><td>-2^15 ~ 2^15 - 1</td><td>double</td><td>8 byte</td><td></td></tr><tr><td>int</td><td>4 byte</td><td></td><td></td><td></td><td></td></tr><tr><td>long</td><td>4 byte</td><td></td><td></td><td></td><td></td></tr></tbody></table><ul><li><p>정수</p><ul><li>int 와 long 의 크기는 운영체제나 컴파일러 기준으로 크기가 다름</li><li>윈도우에서는 무조건 4 byte<ul><li>컴파일러 상관없이</li><li>이유: 16 비트 컴퓨터였을때<ul><li>int 가 2 byte</li><li>long 은 4 byte</li></ul></li><li>2 byte 를 위해서 short 를 만듬</li></ul></li><li>상황에 따라서 크기가 다를 수 있음</li></ul></li><li><p>실수</p><ul><li>게임에서는 통상적으로 float 을 많이 씀</li><li>지수, 부수 로 나뉘어 있음</li></ul></li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 자료형 변수이름 = 초기값;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">char</span> blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="keyword">int</span> age = <span class="number">33</span>;</span><br><span class="line">    <span class="keyword">float</span> tall = <span class="number">179.99f</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//float tall = 179.99;</span></span><br><span class="line">    <span class="comment">// Variable.cpp(8,24): warning C4305:  '초기화 중': 'double'에서 'float'(으)로 잘립니다.</span></span><br><span class="line">    <span class="comment">// 프로그래밍 할때는 Warning 을 최대한 없애는게 좋음</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; <span class="comment">// 최신 컴파일러에서는 없어도 됨.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="변수-선언-유의사항"><a href="#변수-선언-유의사항" class="headerlink" title="변수 선언 유의사항"></a>변수 선언 유의사항</h2><h3 id="1-같은-이름의-변수를-중복해서-선언-할-수-없다"><a href="#1-같은-이름의-변수를-중복해서-선언-할-수-없다" class="headerlink" title="1. 같은 이름의 변수를 중복해서 선언 할 수 없다."></a>1. 같은 이름의 변수를 중복해서 선언 할 수 없다.</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="keyword">double</span> blood = <span class="number">13.22</span>;</span><br><span class="line">    <span class="comment">// 오류 C2371 'blood': 재정의. 기본 형식이 다릅니다.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="2-변수-이름-제일-앞에는-숫자가-올-수-없다-뒤에나-중간엔-가능"><a href="#2-변수-이름-제일-앞에는-숫자가-올-수-없다-뒤에나-중간엔-가능" class="headerlink" title="2. 변수 이름 제일 앞에는 숫자가 올 수 없다.  (뒤에나 중간엔 가능)"></a>2. 변수 이름 제일 앞에는 숫자가 올 수 없다.  (뒤에나 중간엔 가능)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> <span class="number">0b</span>lood = <span class="string">'B'</span>;</span><br><span class="line">  <span class="comment">// 오류 C2059 구문 오류: '숫자의 접미사가 잘못되었습니다.'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="3-변수-중간에-띄어쓰기를-할-수-없다"><a href="#3-변수-중간에-띄어쓰기를-할-수-없다" class="headerlink" title="3. 변수 중간에 띄어쓰기를 할 수 없다."></a>3. 변수 중간에 띄어쓰기를 할 수 없다.</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> my blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="comment">// 오류 C2065 'blood': 선언되지 않은 식별자입니다.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="4-특수문자를-사용-할-수-없다-단-제외"><a href="#4-특수문자를-사용-할-수-없다-단-제외" class="headerlink" title="4. 특수문자를 사용 할 수 없다. 단 _ 제외"></a>4. 특수문자를 사용 할 수 없다. 단 _ 제외</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> @blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="comment">// 오류 C2018 '0x40' 문자를 인식할 수 없습니다.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>네이밍 규칙<ul><li>참조 사이트: <a href="https://shrimk-coding.tistory.com/1" rel="external nofollow noopener noreferrer" target="_blank">https://shrimk-coding.tistory.com/1</a></li><li>변수 이름 찾는 사이트: <a href="https://www.curioustore.com/#!/" rel="external nofollow noopener noreferrer" target="_blank">https://www.curioustore.com/#!/</a></li><li>Unity 에서 C# 을 쓰면서 C# 네이밍 규칙을 따라서 사용하게 됨</li><li>카멜 표기법<ul><li>시작할 때 소문자로 시작해서 띄어쓰기 하는 부분에서 대문자</li><li>변수 이름에 사용</li></ul></li><li>파스칼 표기법<ul><li>대문자로 시작</li><li>함수 이름에 사용</li></ul></li></ul></li></ul><h2 id="변수-데이터-변경"><a href="#변수-데이터-변경" class="headerlink" title="변수 데이터 변경"></a>변수 데이터 변경</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"내 혈액형은 %c 입니다. \n"</span>, blood);</span><br><span class="line">    </span><br><span class="line">    blood = <span class="string">'A'</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"내 혈액형은 %c 입니다. \n"</span>, blood);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/variable/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>cpp 파일 빌드에서 제외</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/exclude-from-build-cpp-file/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/exclude-from-build-cpp-file/</guid>
+      <pubDate>Mon, 02 Sep 2019 03:50:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;중복되는 함수가 있을 때 임시로 빌드에서 제외하기 위함&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;제외할 소스 우측 마우스&lt;/li&gt;
+&lt;li&gt;속성&lt;/li&gt;
+&lt;li&gt;구성 속성 - 일반&lt;/li&gt;
+&lt;li&gt;빌드에서 제외 = 예&lt;/li&gt;
+&lt;li&gt;확인&lt;/li&gt;
+&lt;/ol&gt;
+
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>중복되는 함수가 있을 때 임시로 빌드에서 제외하기 위함</p><ol><li>제외할 소스 우측 마우스</li><li>속성</li><li>구성 속성 - 일반</li><li>빌드에서 제외 = 예</li><li>확인</li></ol>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/exclude-from-build-cpp-file/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>디버깅 방법</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/how-to-debug/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/how-to-debug/</guid>
+      <pubDate>Mon, 02 Sep 2019 03:40:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;멈추고 싶은 줄에 브레이크 포인트를 찍는다.&lt;ul&gt;
+&lt;li&gt;F9&lt;/li&gt;
+&lt;li&gt;마우스로 왼쪽 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;디버깅 시작&lt;ul&gt;
+&lt;li&gt;디버그(D) - 디버깅 시작(S) F5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;l
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<ol><li>멈추고 싶은 줄에 브레이크 포인트를 찍는다.<ul><li>F9</li><li>마우스로 왼쪽 </li></ul></li><li>디버깅 시작<ul><li>디버그(D) - 디버깅 시작(S) F5</li></ul></li><li>브레이크 포인트에 노란색 화살표가 들어오는지 확인</li><li>F10을 이용해서 다음 줄로 이동하거나 다음 브레이크 포인트를 잡고 계속(F5)을 눌러준다.</li></ol>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/how-to-debug/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>디버깅 시작</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/debug-start/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/debug-start/</guid>
+      <pubDate>Mon, 02 Sep 2019 03:30:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;디버그(D) - 디버깅 시작(S) F5&lt;/li&gt;
+&lt;li&gt;디버그(D) - 디버그하지 않고 시작(H) Ctrl+F5&lt;ul&gt;
+&lt;li&gt;개발 당시에는 이렇게 실행하지 말 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<ul><li>디버그(D) - 디버깅 시작(S) F5</li><li>디버그(D) - 디버그하지 않고 시작(H) Ctrl+F5<ul><li>개발 당시에는 이렇게 실행하지 말 것</li></ul></li></ul>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/debug-start/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>간략하게 설명한 컴파일 순서</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/brief-description-compile-order/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/brief-description-compile-order/</guid>
+      <pubDate>Mon, 02 Sep 2019 03:20:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;전처리기&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;라이브러리 읽기&lt;/li&gt;
+&lt;li&gt;주석 삭제&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<ol><li><p>전처리기</p><ul><li>라이브러리 읽기</li><li>주석 삭제<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 주석 1</span></span><br><span class="line"><span class="comment">/* 주석 2 */</span></span><br></pre></td></tr></table></figure></li></ul></li><li><p>컴파일</p><ul><li>빌드(B) - 컴파일(M) Ctrl+F7</li><li>C++ 파일을 Assembly 로 변환</li><li>문법 틀린것을 찾을 때 좋음</li></ul></li><li><p>어셈블러</p><ul><li>Assembly 를 기계어로 변환</li></ul></li><li><p>링커</p><ul><li>라이브러리, 스크립트 들을 처리해줌</li></ul></li><li><p>빌드</p></li></ol>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/brief-description-compile-order/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>프로젝트에 cpp 파일 추가</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/add-cpp-file-in-project/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/add-cpp-file-in-project/</guid>
+      <pubDate>Mon, 02 Sep 2019 03:10:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;“소스 파일” 우측 마우스&lt;/li&gt;
+&lt;li&gt;“새 항목” 클릭&lt;/li&gt;
+&lt;li&gt;“C++ 파일(.cpp)” 클릭&lt;/li&gt;
+&lt;li&gt;파일 이름 정하기&lt;/li&gt;
+&lt;li&gt;추가&lt;/li&gt;
+&lt;/ol&gt;
+
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<ol><li>“소스 파일” 우측 마우스</li><li>“새 항목” 클릭</li><li>“C++ 파일(.cpp)” 클릭</li><li>파일 이름 정하기</li><li>추가</li></ol>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/add-cpp-file-in-project/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>c++ 프로젝트 만들기</title>
+      <link>https://rosiecube.github.io/2019/09/02/programming/c++/make-c++-project/</link>
+      <guid>https://rosiecube.github.io/2019/09/02/programming/c++/make-c++-project/</guid>
+      <pubDate>Mon, 02 Sep 2019 03:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;Window 데스크톱 마법사&lt;/li&gt;
+&lt;li&gt;프로젝트 이름 정하기&lt;/li&gt;
+&lt;li&gt;위치 설정&lt;/li&gt;
+&lt;li&gt;만들기&lt;/li&gt;
+&lt;li&gt;콘솔 애플리케이션(.exe)&lt;/li&gt;
+&lt;li&gt;빈 프로젝트&lt;/li&gt;
+&lt;li&gt;확인&lt;/li&gt;
+&lt;/ol&gt;
+
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<ol><li>Window 데스크톱 마법사</li><li>프로젝트 이름 정하기</li><li>위치 설정</li><li>만들기</li><li>콘솔 애플리케이션(.exe)</li><li>빈 프로젝트</li><li>확인</li></ol>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/09/02/programming/c++/make-c++-project/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Visual Studio 2019 Community 설치</title>
+      <link>https://rosiecube.github.io/2019/08/30/programming/c++/install-visual-studio-2019-community/</link>
+      <guid>https://rosiecube.github.io/2019/08/30/programming/c++/install-visual-studio-2019-community/</guid>
+      <pubDate>Fri, 30 Aug 2019 03:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;다운로드&quot;&gt;&lt;a href=&quot;#다운로드&quot; class=&quot;headerlink&quot; title=&quot;다운로드&quot;&gt;&lt;/a&gt;다운로드&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://visualstudio.microsoft.com/ko/&quot; rel=&quot;external
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="다운로드"><a href="#다운로드" class="headerlink" title="다운로드"></a>다운로드</h2><p><a href="https://visualstudio.microsoft.com/ko/" rel="external nofollow noopener noreferrer" target="_blank">https://visualstudio.microsoft.com/ko/</a></p><ol><li>visual studio 검색</li><li>Community 2019 다운로드 (학습용)</li></ol><h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>C++를 사용한 데스크톱 개발 체크 후 설치</p>]]></content:encoded>
+      
+      <comments>https://rosiecube.github.io/2019/08/30/programming/c++/install-visual-studio-2019-community/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Unmanaged Language 배워야 하는 이유</title>

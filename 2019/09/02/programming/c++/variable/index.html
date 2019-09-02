@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="게임 만들기 블로그">
+
+
+
+<title>변수 (Variable) | rosiecube</title>
+
+<link rel="canonical" href="https://rosiecube.github.io/2019/09/02/programming/c++/variable/">
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+
+    
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-145895548-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">RosieCube&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">RosieCube&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">변수 (Variable)</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">rosiecube</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">2019-09-02<!--&nbsp;&nbsp;13:00:00--></a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                            <a href="/categories/programming/">programming</a> / <a href="/categories/programming/c/">c++</a>
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <ul>
+<li>8 bit = 1 byte</li>
+<li>첫번째 비트는 음수 양수</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>정수</th>
+<th></th>
+<th></th>
+<th>실수</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>char</td>
+<td>1 byte</td>
+<td>-2^7 ~ 2^7 - 1</td>
+<td>float</td>
+<td>4 byte</td>
+<td></td>
+</tr>
+<tr>
+<td>short</td>
+<td>2 byte</td>
+<td>-2^15 ~ 2^15 - 1</td>
+<td>double</td>
+<td>8 byte</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>4 byte</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td>4 byte</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>정수</p>
+<ul>
+<li>int 와 long 의 크기는 운영체제나 컴파일러 기준으로 크기가 다름</li>
+<li>윈도우에서는 무조건 4 byte<ul>
+<li>컴파일러 상관없이</li>
+<li>이유: 16 비트 컴퓨터였을때<ul>
+<li>int 가 2 byte</li>
+<li>long 은 4 byte</li>
+</ul>
+</li>
+<li>2 byte 를 위해서 short 를 만듬</li>
+</ul>
+</li>
+<li>상황에 따라서 크기가 다를 수 있음</li>
+</ul>
+</li>
+<li><p>실수</p>
+<ul>
+<li>게임에서는 통상적으로 float 을 많이 씀</li>
+<li>지수, 부수 로 나뉘어 있음</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 자료형 변수이름 = 초기값;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">char</span> blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="keyword">int</span> age = <span class="number">33</span>;</span><br><span class="line">    <span class="keyword">float</span> tall = <span class="number">179.99f</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//float tall = 179.99;</span></span><br><span class="line">    <span class="comment">// Variable.cpp(8,24): warning C4305:  '초기화 중': 'double'에서 'float'(으)로 잘립니다.</span></span><br><span class="line">    <span class="comment">// 프로그래밍 할때는 Warning 을 최대한 없애는게 좋음</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; <span class="comment">// 최신 컴파일러에서는 없어도 됨.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="변수-선언-유의사항"><a href="#변수-선언-유의사항" class="headerlink" title="변수 선언 유의사항"></a>변수 선언 유의사항</h2><h3 id="1-같은-이름의-변수를-중복해서-선언-할-수-없다"><a href="#1-같은-이름의-변수를-중복해서-선언-할-수-없다" class="headerlink" title="1. 같은 이름의 변수를 중복해서 선언 할 수 없다."></a>1. 같은 이름의 변수를 중복해서 선언 할 수 없다.</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="keyword">double</span> blood = <span class="number">13.22</span>;</span><br><span class="line">    <span class="comment">// 오류 C2371 'blood': 재정의. 기본 형식이 다릅니다.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-변수-이름-제일-앞에는-숫자가-올-수-없다-뒤에나-중간엔-가능"><a href="#2-변수-이름-제일-앞에는-숫자가-올-수-없다-뒤에나-중간엔-가능" class="headerlink" title="2. 변수 이름 제일 앞에는 숫자가 올 수 없다.  (뒤에나 중간엔 가능)"></a>2. 변수 이름 제일 앞에는 숫자가 올 수 없다.  (뒤에나 중간엔 가능)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> <span class="number">0b</span>lood = <span class="string">'B'</span>;</span><br><span class="line">  <span class="comment">// 오류 C2059 구문 오류: '숫자의 접미사가 잘못되었습니다.'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-변수-중간에-띄어쓰기를-할-수-없다"><a href="#3-변수-중간에-띄어쓰기를-할-수-없다" class="headerlink" title="3. 변수 중간에 띄어쓰기를 할 수 없다."></a>3. 변수 중간에 띄어쓰기를 할 수 없다.</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> my blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="comment">// 오류 C2065 'blood': 선언되지 않은 식별자입니다.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-특수문자를-사용-할-수-없다-단-제외"><a href="#4-특수문자를-사용-할-수-없다-단-제외" class="headerlink" title="4. 특수문자를 사용 할 수 없다. 단 _ 제외"></a>4. 특수문자를 사용 할 수 없다. 단 _ 제외</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> @blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="comment">// 오류 C2018 '0x40' 문자를 인식할 수 없습니다.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>네이밍 규칙<ul>
+<li>참조 사이트: <a href="https://shrimk-coding.tistory.com/1" rel="external nofollow noopener noreferrer" target="_blank">https://shrimk-coding.tistory.com/1</a></li>
+<li>변수 이름 찾는 사이트: <a href="https://www.curioustore.com/#!/" rel="external nofollow noopener noreferrer" target="_blank">https://www.curioustore.com/#!/</a></li>
+<li>Unity 에서 C# 을 쓰면서 C# 네이밍 규칙을 따라서 사용하게 됨</li>
+<li>카멜 표기법<ul>
+<li>시작할 때 소문자로 시작해서 띄어쓰기 하는 부분에서 대문자</li>
+<li>변수 이름에 사용</li>
+</ul>
+</li>
+<li>파스칼 표기법<ul>
+<li>대문자로 시작</li>
+<li>함수 이름에 사용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="변수-데이터-변경"><a href="#변수-데이터-변경" class="headerlink" title="변수 데이터 변경"></a>변수 데이터 변경</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> blood = <span class="string">'B'</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"내 혈액형은 %c 입니다. \n"</span>, blood);</span><br><span class="line">    </span><br><span class="line">    blood = <span class="string">'A'</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"내 혈액형은 %c 입니다. \n"</span>, blood);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>rosiecube</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://rosiecube.github.io/2019/09/02/programming/c++/variable/">https://rosiecube.github.io/2019/09/02/programming/c++/variable/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="external nofollow noopener noreferrer" target="_blank">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/09/02/programming/c++/operator/">연산자 (Operator)</a>
+            
+            
+            <a class="next" rel="next" href="/2019/09/02/programming/c++/exclude-from-build-cpp-file/">cpp 파일 빌드에서 제외</a>
+            
+        </section>
+        <section class="post-comment">
+            
+                <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://rosiecube-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
+
+            
+        </section>
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© rosiecube | Powered by <a href="https://hexo.io" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="external nofollow noopener noreferrer">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

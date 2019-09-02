@@ -4,22 +4,17 @@
 
     <sitemap>
         <loc>https://rosiecube.github.io/post-sitemap.xml</loc>
-        <lastmod>2019-08-26T02:10:07.996Z</lastmod>
+        <lastmod>2019-09-02T06:30:47.418Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://rosiecube.github.io/page-sitemap.xml</loc>
-        <lastmod>2019-08-18T11:47:24.578Z</lastmod>
+        <lastmod>2019-08-29T13:15:03.619Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://rosiecube.github.io/category-sitemap.xml</loc>
-        <lastmod>2019-08-26T02:10:07.996Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>https://rosiecube.github.io/tag-sitemap.xml</loc>
-        
+        <lastmod>2019-09-02T06:30:47.418Z</lastmod>
     </sitemap>
 
 </sitemapindex>
