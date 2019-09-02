@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://rosiecube.github.io/2019/09/02/programming/c++/standard-input-output-library/</loc>
+        <lastmod>2019-09-02T06:34:10.660Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://rosiecube.github.io/2019/09/02/programming/c++/conditional-statement/</loc>
         <lastmod>2019-09-02T06:30:47.418Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,14 +26,6 @@
     <url>
         <loc>https://rosiecube.github.io/2019/09/02/programming/c++/operator/</loc>
         <lastmod>2019-09-02T06:29:34.284Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rosiecube.github.io/2019/09/02/programming/c++/standard-input-output-library/</loc>
-        <lastmod>2019-09-02T06:29:07.068Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
